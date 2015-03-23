@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_advertisement/models/rules">
+	<fieldset name="details" label="COM_ADVERTISEMENT_ADVERTISEMENT_DETAILS">
+		<field name="id" type="hidden" />
+		<field name="title" type="text" label="COM_ADVERTISEMENT_ADVERTISEMENT_TITLE_LABEL" description="COM_ADVERTISEMENT_ADVERTISEMENT_TITLE_DESC" size="40" class="inputbox validate-title" validate="title" required="true" default="" />
+		<field name="description" type="editor" label="COM_ADVERTISEMENT_ADVERTISEMENT_DESCRIPTION_LABEL" description="COM_ADVERTISEMENT_ADVERTISEMENT_DESCRIPTION_DESC" filter="safehtml" class="inputbox" required="true" default="" />
+		<field name="email" type="text" label="COM_ADVERTISEMENT_ADVERTISEMENT_EMAIL_LABEL" description="COM_ADVERTISEMENT_ADVERTISEMENT_EMAIL_DESC" size="40" class="inputbox validate-email" validate="email" required="true" default="" />
+		<field name="catid"	type="category"	extension="com_advertisement" class="inputbox"	default="" label="COM_ADVERTISEMENT_ADVERTISEMENT_FIELD_CATID_LABEL" description="COM_ADVERTISEMENT_ADVERTISEMENT_FIELD_CATID_DESC" required="true">
+			<option value="0">JOPTION_SELECT_CATEGORY</option>
+		</field>
+	</fieldset>
+	<fields name="params">
+		<fieldset name="params" label="JGLOBAL_FIELDSET_DISPLAY_OPTIONS">
+			<field name="show_category" type="list" label="COM_ADVERTISEMENT_ADVERTISEMENT_FIELD_SHOW_CATEGORY_LABEL" description="COM_ADVERTISEMENT_ADVERTISEMENT_FIELD_SHOW_CATEGORY_DESC" default="">
+				<option value="">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+		</fieldset>
+	</fields>
+	<fieldset name="accesscontrol" label="COM_ADVERTISEMENT_FIELDSET_RULES">
+		<field name="asset_id" type="hidden" filter="unset"/>
+		<field name="rules"	type="rules" label="COM_ADVERTISEMENT_FIELD_RULES_LABEL" filter="rules" validate="rules" class="inputbox" component="com_advertisement" section="message"/>
+	</fieldset>
+</form>

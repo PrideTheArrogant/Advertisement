@@ -1,0 +1,35 @@
+.pages, .email {
+	width: 100%;
+	text-align: right;
+}
+
+#preview {
+	background-color: #F5F5F5;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid #E3E3E3;
+	padding: 10px;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+.title-left {
+	width: 50%;
+	float: left;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.title-right {
+	width: 50%;
+	float: left;
+	text-align: right;
+	font-weight: bold;
+}
+
+.content {
+	width: 100%;
+	clear: both;
+	padding-top: 30px;
+}
