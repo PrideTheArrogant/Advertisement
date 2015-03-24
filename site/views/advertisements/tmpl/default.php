@@ -8,22 +8,34 @@
  */
 
 defined('_JEXEC') or die('Restricted access');
-
-$date = date("d-m-Y", strtotime($this->item->date));
 ?>
 
 <div id="preview">
+
+<?php
+if (isset($this->item)) {
+?>
+
 	<div class="title-left">
 		<?php echo $this->item->title; ?>
 	</div>
 	<div class="title-right">
-		<?php echo "Data Pubblicazione: " . $date; ?>
+		<?php echo JText::_('COM_ADVERTISEMENT_DATE') . ": " . $this->item->date; ?>
 	</div>
 
 	<div class="content">
 		<?php echo $this->item->description; ?>
 	</div>
 	<div class="email">
-		<a href="mailto:<?php echo $this->item->email; ?>">Invia Curriculum</a>
+		<a href="mailto:<?php echo $this->item->email; ?>"><?php echo JText::_('COM_ADVERTISEMENT_SENDMAIL'); ?></a>
 	</div>
+
+<?php
+} else {
+?>
+	<?php echo JText::_('COM_NO_ADVERTISEMENT'); ?>
+<?php
+}
+?>
+
 </div>

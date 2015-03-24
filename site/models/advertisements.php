@@ -35,7 +35,7 @@ class AdvertisementModelAdvertisements extends JModelItem
 			$id    = $this->getState('message.id');
 			$db    = JFactory::getDbo();
 			$query = $db->getQuery(true);
-			$query->select('h. title, h.description, h.date, h.email, h.params, c.title as category')
+			$query->select('h. title, h.description, DATE_FORMAT(h.date, "%d-%m-%Y") as date, h.email, h.params, c.title as category')
 				  ->from('#__advertisement as h')
 				  ->leftJoin('#__categories as c ON h.catid=c.id')
 				  ->where('h.id=' . (int)$id);

@@ -17,8 +17,8 @@ class AdvertisementViewAdvertisement extends JViewLegacy
 		$id     = $jinput->get('id', 1, 'INT');
 
 		$this->id = $id;
-		$this->rows = $this->get('Item');
-		$this->count = round((count($this->rows)/10)+1);
+		$this->item = $this->get('Item');
+		$this->count = round((count($this->item)/10)+1);
 		$this->link = "index.php?option=com_advertisement";
 
 		if (count($errors = $this->get('Errors')))

@@ -30,16 +30,15 @@ class AdvertisementModelAdvertisement extends JModelItem
 
 	public function getItem()
 	{
-		if (!isset($this->rows))
+		if (!isset($this->item))
 		{
 			$id    = $this->getState('message.id');
 			$db    = JFactory::getDbo();
 			$query = $db->getQuery(true);
-			$query->select('*') ->from('#__advertisement');
+			$query->select('id, title, description, DATE_FORMAT(date, "%d-%m-%Y") as date') ->from('#__advertisement');
 			$db->setQuery($query);
-			$result = $db->loadAssocList();
 		}
 
-		return $result;
+		if ($this->item = $db->loadAssocList()) return $this->item;
 	}
 }
