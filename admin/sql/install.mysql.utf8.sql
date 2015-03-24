@@ -15,7 +15,3 @@ CREATE TABLE `#__advertisement` (
 	ENGINE =MyISAM
 	AUTO_INCREMENT =0
 	DEFAULT CHARSET =utf8;
-
-INSERT INTO `#__advertisement` (`greeting`) VALUES
-('Advertisement!'),
-('Good bye Advertisement!');
