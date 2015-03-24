@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <metadata>
-	<layout title="COM_ADVERTISEMENT_ADVERTISEMENT_VIEW_DEFAULT_TITLE">
-		<message>COM_ADVERTISEMENT_ADVERTISEMENT_VIEW_DEFAULT_DESC</message>
+	<layout title="COM_ADVERTISEMENT_ADVERTISEMENTS_VIEW_DEFAULT_TITLE">
+		<message>COM_ADVERTISEMENT_ADVERTISEMENTS_VIEW_DEFAULT_DESC</message>
 	</layout>
 	<fields name="request" addfieldpath="/administrator/components/com_advertisement/models/fields">
 		<fieldset name="request">
-			<field name="id" type="advertisement" label="COM_ADVERTISEMENT_ADVERTISEMENT_FIELD_GREETING_LABEL" description="COM_ADVERTISEMENT_ADVERTISEMENT_FIELD_GREETING_DESC" default="1">
+			<field name="id" type="advertisement" label="COM_ADVERTISEMENT_ADVERTISEMENT_FIELD_DESCRIPTION_LABEL" description="COM_ADVERTISEMENT_ADVERTISEMENT_FIELD_DESCRIPTION_DESC" default="1">
 			</field>
 		</fieldset>
 	</fields>

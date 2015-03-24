@@ -3,10 +3,4 @@
 	<layout title="COM_ADVERTISEMENT_ADVERTISEMENT_VIEW_DEFAULT_TITLE">
 		<message>COM_ADVERTISEMENT_ADVERTISEMENT_VIEW_DEFAULT_DESC</message>
 	</layout>
-	<fields name="request" addfieldpath="/administrator/components/com_advertisement/models/fields">
-		<fieldset name="request">
-			<field name="id" type="advertisement" label="COM_ADVERTISEMENT_ADVERTISEMENT_FIELD_GREETING_LABEL" description="COM_ADVERTISEMENT_ADVERTISEMENT_FIELD_GREETING_DESC" default="1">
-			</field>
-		</fieldset>
-	</fields>
 </metadata>

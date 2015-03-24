@@ -10,7 +10,8 @@
 defined('_JEXEC') or die('Restricted access');
 
 $document = JFactory::getDocument();
-$document->addStyleSheet('media/com_advertisement/css/style.css');
+
+$document->addStyleSheet(JUri::root() . 'media/com_advertisement/css/style.css');
 
 $controller = JControllerLegacy::getInstance('Advertisement');
 

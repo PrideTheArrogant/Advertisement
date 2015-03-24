@@ -11,7 +11,7 @@ defined('_JEXEC') or die('Restricted access');
  
 JFormHelper::loadFieldClass('list');
 
-class JFormFieldAdvertisement extends JFormFieldList
+class JFormFieldAdvertisements extends JFormFieldList
 {
 	protected $type = 'Advertisement';
 
@@ -19,9 +19,8 @@ class JFormFieldAdvertisement extends JFormFieldList
 	{
 		$db    = JFactory::getDBO();
 		$query = $db->getQuery(true);
-		$query->select('#__advertisement.id as id, title, description, #__categories.title as category,catid');
+		$query->select('id,  title');
 		$query->from('#__advertisement');
-		$query->leftJoin('#__categories on catid=#__categories.id');
 		$query->where('#__advertisement.published = 1');
 		$db->setQuery((string) $query);
 		$messages = $db->loadObjectList();
@@ -31,7 +30,7 @@ class JFormFieldAdvertisement extends JFormFieldList
 		{
 			foreach ($messages as $message)
 			{
-				$options[] = JHtml::_('select.option', $message->id, $message->title, $message->description . ($message->catid ? ' (' . $message->category . ')' : ''));
+				$options[] = JHtml::_('select.option', $message->id . ' - ' . $message->title);
 			}
 		}
 
